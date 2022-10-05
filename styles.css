@@ -1,0 +1,93 @@
+/*Global Settings*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vw;
+    overflow: hidden;
+    background-color: #f3f4f4;
+}
+
+/*Toggle Button*/
+
+.mode-tog {
+    background-color: #242424;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translatex(-50%);
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    z-index: 2;
+    transition: 1000ms;
+    border-radius: 50%;
+    
+}
+
+.mode-tog.active {
+    background-color: #f3f4f4;
+    transition: 1000ms;
+}
+
+/*Screen Display*/
+
+.container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 10%;
+    transform: translatex(-50%);
+    width: 30px;
+    height: 30px;
+}
+
+.dark-mode {
+    position: relative;
+    transform: scale(0);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 250vw;
+    height: 250vw;
+    border-radius: 50%;
+    background-color: #161616;
+    transition: 1000ms ease-in-out;
+    display: flex;
+    flex: 0 0 auto;
+}
+
+.dark-mode.active{
+    transform: scale(1);
+    transition: 1000ms ease-in-out;
+}
+
+/*Text*/
+
+h1 {
+    color: #f3f4f4;
+    font-weight: 200;
+    mix-blend-mode: difference;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+}
+
+/*Responsive Screen*/
+
+@media screen and (max-width: 600px) {
+    .dark-mode {
+        width: 250vh;
+        height: 250vh;
+    }
+}
